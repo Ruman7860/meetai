@@ -16,7 +16,6 @@ const Home = () => {
             <p>{session.user?.email}</p>
             <p>{session.user?.name}</p>
             <Button
-                variant={"destructive"}
                 onClick={() => authClient.signOut({
                     fetchOptions: {
                         onSuccess: () => {

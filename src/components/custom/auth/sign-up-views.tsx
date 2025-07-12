@@ -208,14 +208,14 @@ const SignUpView = () => {
                             </div>
                             <p className="text-sm text-gray-500 text-center">
                                 Already have an account?{' '}
-                                <Link href={'/sign-in'} className="text-purple-600 hover:underline cursor-pointer">Sign in</Link>
+                                <Link href={'/sign-in'} className="text-sidebar-accent hover:underline cursor-pointer">Sign in</Link>
                             </p>
                         </form>
                     </Form>
                 </div>
 
                 {/* Right side - image/info */}
-                <div className="hidden md:flex flex-col justify-center items-center bg-gradient-to-bl from-sky-400 to-indigo-700 text-white p-10 gap-7">
+                <div className="hidden md:flex flex-col justify-center items-center bg-radial from-sidebar-accent to-sidebar text-white p-10 gap-7">
                     <Image src="/logo.svg" width={100} height={100} alt="Meet AI Logo" />
                     <h1 className="text-2xl font-semibold">Join Meet AI</h1>
                     <p className="text-center text-sm max-w-xs">
