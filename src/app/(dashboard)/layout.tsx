@@ -1,4 +1,5 @@
 
+import DashboardNavbar from '@/components/custom/dashboard/dashboard-navbar'
 import DashboardSideBar from '@/components/custom/dashboard/dashboard-sidebar'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import React from 'react'
@@ -10,6 +11,7 @@ const Layout = ({ children }: Props) => {
         <SidebarProvider>
             <DashboardSideBar />
             <main>
+                <DashboardNavbar/>
                 {children}
             </main>
         </SidebarProvider>

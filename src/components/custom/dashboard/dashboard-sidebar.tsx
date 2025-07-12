@@ -17,6 +17,7 @@ import {
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import DashboardUserButton from './dashboard-user-button'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 
 const DashboardSideBar = () => {
