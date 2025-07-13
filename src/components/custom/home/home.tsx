@@ -1,31 +1,17 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import { authClient } from '@/lib/auth-client'
+import { useTRPC } from '@/trpc/client'
+import { useQuery } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const Home = () => {
-    const router = useRouter();
-    const { data: session } = authClient.useSession();
-    if (!session) {
-        return <div>Loading</div>
-    }
+    const trpc = useTRPC();
+    const {data} = useQuery(trpc.hello.queryOptions({text: "Ruman"}));
     return (
-        <div className='flex flex-col  '>
-            <p>User logged in :</p>
-            <p>{session.user?.email}</p>
-            <p>{session.user?.name}</p>
-            <Button
-                onClick={() => authClient.signOut({
-                    fetchOptions: {
-                        onSuccess: () => {
-                            router.push("/sign-in")
-                        }
-                    }
-                })}
-            >
-                Sign Out
-            </Button>
+        <div className='flex flex-col'>
+            {data?.greeting}
         </div>
     )
 }
