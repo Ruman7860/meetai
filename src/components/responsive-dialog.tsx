@@ -22,7 +22,7 @@ const ResponsiveDialog = ({children,open,onOpenChange,description,title}:Respons
                     <DrawerTitle>{title}</DrawerTitle>
                     <DrawerDescription>{description}</DrawerDescription>
                 </DrawerHeader>
-                <div className="p-4">
+                <div className="px-2 py-1">
                     {children}
                 </div>
             </DrawerContent>
@@ -36,7 +36,7 @@ const ResponsiveDialog = ({children,open,onOpenChange,description,title}:Respons
                 <DialogTitle>{title}</DialogTitle>
                 <DialogDescription>{description}</DialogDescription>
             </DialogHeader>
-            <div className="p-4">
+            <div className="px-2 py-1">
                 {children}
             </div>
         </DialogContent>
