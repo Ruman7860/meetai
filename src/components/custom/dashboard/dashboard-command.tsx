@@ -7,6 +7,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
+  CommandResponsiveDialog,
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command"
@@ -18,7 +19,7 @@ interface Props {
 
 const DashboardCommand = ({open,setOpen}:Props) => {
     return (
-        <CommandDialog open={open} onOpenChange={setOpen}>
+        <CommandResponsiveDialog open={open} onOpenChange={setOpen}>
             <CommandInput placeholder="Find a meeting or agent" />
             <CommandList>
                 <CommandEmpty>No results found.</CommandEmpty>
@@ -49,7 +50,7 @@ const DashboardCommand = ({open,setOpen}:Props) => {
                     </CommandItem>
                 </CommandGroup>
             </CommandList>
-        </CommandDialog>
+        </CommandResponsiveDialog>
     )
 }
 
