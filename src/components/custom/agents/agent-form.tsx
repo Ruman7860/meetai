@@ -26,7 +26,7 @@ const AgentCreateEditForm = ({ onSuccess, onCancel, initialValues }: AgentCreate
     const createAgent = useMutation(trpc.agents.create.mutationOptions({
         onSuccess: () => {
             queryClient.invalidateQueries(
-                trpc.agents.getMany.queryOptions(),
+                trpc.agents.getMany.queryOptions({}),
             )
 
             if(initialValues?.id){
